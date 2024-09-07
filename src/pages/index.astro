@@ -4,19 +4,53 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+
+	<section id="hero"class="grid lg:grid-cols-5 mx-8 gap-10 pt-5">
+		<img class="col-span-3  object-cover" src="/public/anamorfiske-landskaber-amager-faelled-4.jpg" alt="Oppefra"/>
+		<div class="content-start mt-10 animate__animated animate__fadeInRight">
+			<h1 class="text-6xl mb-5">Københavnerbilleder</h1>
+			<h2 class="text-4xl mb-10">En guide til hipster foto</h2>
+			<p class="mb-16">- af Sten Simons</p>
+			<div class="animate-pulse">
+			<Button>Køb bogen her</Button>
+		</div>
+		</div>
+</section>
+
+<div class="max-w-screen-xl mx-auto px-4 xl:px-0 pt-16 lg:pt-0">
+	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
+
+<section id="indhold" class="mt-32 max-w-4xl mx-auto grid lg:grid-cols-2 lg:gap-28">
+	<article >
+		<h2 class="text-4xl mb-10">Stamdata for bogen</h2>
+		<ul class="flex flex-col gap-4">
+			<li>Titel: Københavnerbilleder - en guide til hipster foto</li>
+			<li>Forfatter: Sten Simons</li>
+			<li>Antal sider: 344</li>
+			<li>Forlag: Mellem Linjerne</li>
+			<li>ISBN: 987-6-987654-32-1</li>
+			<li>Pris: 399.-</li>
+		</ul>
 	</article>
+	<article  >
+		<h2 class="text-4xl mb-10">Quick facts om bogen</h2>
+		<p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!	 </p>
+	</article>
+</section>
+
+<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
 	<section class="mt-32 grid lg:grid-cols-3 mx-auto gap-4 items-center">
-	
+		<img src="/public/kobenhavnerbilleder_oppefra.jpg" alt="Oppefra"/>
+		<img src="/public/kobenhavnerbilleder-sten-simons.jpg" alt="Bog"/>
+		<img src="/public/kobenhavnerbilleder_aaben_venstre.jpg" alt="Venstre"/>
 	</section>
 
+	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
+
 	<section class="mt-32" id="kapitlerne">
-		<h2 class="text-4xl font-bold">Kapitlerne</h2>
-		<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-8">
+		<h2 class="text-4xl mb-10">Kapitlerne</h2>
+		<div class="grid grid-cols-1 lg:grid-cols-2 mx-auto mt-4 gap-16 lg:gap-20">
 			<article class="prose">
 				<h3 class="text-xl">Kapitel 1 - Intro til street foto</h3>
 				<p>Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
@@ -48,9 +82,11 @@ import Link from '../components/Link.astro';
 		</div>
 	</section>
 
+	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
+
 	<section class="mt-32">
-		<h2 class="text-4xl font-bold">Pressen siger</h2>
-		<div class="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-4">
+		<h2 class="text-4xl  mb-10">Pressen siger</h2>
+		<div class="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-10 lg:gap-28">
 			<article class="prose mb-6">
 				<div class="flex"><span class="font-bold"></span>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -124,25 +160,95 @@ import Link from '../components/Link.astro';
 		</div>
 	</section>
 
-	<!-- tailwind form -->
-	<section  id="tilmelding" class="max-w-lg mx-auto mt-32 p-4">
-		<h2 class="text-4xl font-bold pb-4">Køb Københavnerbilleder nu!</h2>
+	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
+
+	<section class="grid grid-cols-1 lg:grid-cols-4 mx-auto gap-4 mt-32 ">
+		<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede1.jpeg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede2.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede3.jpeg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede4.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede5.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede6.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede7.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede8.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede9.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede10.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede11.jpg" alt="Oppefra"/>
+	</div>
+	<div class="overflow-hidden">
+		<img class="w-full h-72 object-cover transition-all hover:scale-105" src="/public/billede12.jpg" alt="Oppefra"/>
+	</div>
+
+	</section>
+
+	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
+
+	
+	<section id="forfatteren" class="max-w-3xl mx-auto mt-32"> 
+		<h2 class="text-4xl">Forfatteren</h2>
+		<div class="grid lg:grid-cols-2 mt-10 gap-10">
+		<div>
+			<img class="w-full h-96 object-cover hover:animate-pulse" src="/public/sten_simons.jpg" alt="Sten">
+		</div>
+		<article class="prose">
+			<p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”</p>
+			<p>Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>		
+		</article>
+	</div>
+	</section>
+
+	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
+
+	<section  id="bestil" class="max-w-xl mx-auto mt-32 p-2">
+		<h2 class="text-4xl pb-10">Køb Københavnerbilleder nu!</h2>
 		<form class="space-y-4 grid grid-cols-1 gap-6">
 
-			<div class="">
+			<div class="flex flex-row gap-5">
 				<label for="antal">Antal:</label>					
 				<select name="antal" id="antal">
-					<option value="oktober">Oktober 2024</option>
-					<option value="december">December 2024</option>
-					<option value="februar">Februar 2025</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
 				</select>
 			</div>
 
-			<div class="">
+			<div class="gap-6 flex">
+				<div>
 				<input type="radio" id="kredit" name="levering">
 				<label for="PostDK">PostDK</label>
+			</div>
+			<div>
 				<input type="radio" id="kontant" name="levering">
 				<label for="Afhent">Afhent</label>
+			</div>
 				
 			</div>
 		
@@ -171,10 +277,10 @@ import Link from '../components/Link.astro';
 				<label for="nyhedsbrev">Ja tak til nyhedsbrev</label>
 			</div>
 
-			<div class="flex justify-end hover:rotate-hor-top">
+			<div class="flex justify-end pb-5">
 				<Button variant="primary" size="medium">Fortsæt</Button>
 			</div>
 		</form>
 	</section>
-	<!-- tailwind form slut -->
+</div>
 </MainLayout>

@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  p,
+  ul,
+  label,
+  input {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
 
+  h1,
+  h2,
+  h3,
+  a,
+  button {
+    font-family: "Oswald";
+  }
 }
