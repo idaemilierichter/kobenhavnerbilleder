@@ -1,13 +1,16 @@
 ---
 import Link from '../components/Link.astro'
 ---
-<div x-data="{ showmenu: false }" class="p-8 fixed lg:static w-full z-10 bg-neutral-50" >
+<div x-data="{ showmenu: false }" class="px-8 py-4 fixed lg:static w-full z-10 bg-neutral-50" >
     <div id="navbar" class="flex flex-row justify-between">
     <div id="logo" class="">
-    <a href="#navbar" class="text-lg">Københavnerbilleder</a>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-20">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+      </svg>
+      
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
-    <ul class="flex flex-row gap-10">
+    <ul class="flex flex-row gap-10 lg:pt-5">
     <li class=""><Link href="#hero" >Københavnerbilleder</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
     <li class=""><Link href="#indhold" >Bogens indhold</Link></li>
     <li class=""><Link href="#forfatteren" >Forfatteren</Link></li>

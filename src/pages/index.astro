@@ -5,25 +5,26 @@ import Link from '../components/Link.astro';
 ---
 <MainLayout title="Titel">
 
-	<section id="hero"class="grid lg:grid-cols-5 mx-8 gap-10 pt-5">
-		<img class="col-span-3  object-cover" src="/public/anamorfiske-landskaber-amager-faelled-4.jpg" alt="Oppefra"/>
-		<div class="content-start mt-10 animate__animated animate__fadeInRight">
+	<section id="hero"class="grid lg:grid-cols-5 mx-8 gap-10 ">
+		<img class="col-span-3 object-cover" src="/public/anamorfiske-landskaber-amager-faelled-4.jpg" alt="Oppefra"/>
+		<div class="content-center animate__animated animate__fadeInRight">
 			<h1 class="text-6xl mb-5">Københavnerbilleder</h1>
-			<h2 class="text-4xl mb-10">En guide til hipster foto</h2>
-			<p class="mb-16">- af Sten Simons</p>
+			<h2 class="text-3xl mb-6 lg:mb-10 min-w-40">En guide til hipster foto</h2>
+			<p class="mb-8 lg:mb-16">- af Sten Simons</p>
 			<div class="animate-pulse">
-			<Button>Køb bogen her</Button>
+			<Button size="large">Køb bogen her!</Button>
 		</div>
 		</div>
 </section>
 
-<div class="max-w-screen-xl mx-auto px-4 xl:px-0 pt-16 lg:pt-0">
+<div class="max-w-screen-xl mx-auto px-4 xl:px-0 lg:pt-0">
+	
 	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
-<section id="indhold" class="mt-32 max-w-4xl mx-auto grid lg:grid-cols-2 lg:gap-28">
+<section id="indhold" class="mt-20 lg:mt-32 max-w-4xl mx-auto grid gap-16 lg:grid-cols-2 lg:gap-28">
 	<article >
-		<h2 class="text-4xl mb-10">Stamdata for bogen</h2>
-		<ul class="flex flex-col gap-4">
+		<h2 class="text-4xl mb-10 lg:text-end">Stamdata for bogen</h2>
+		<ul class="flex flex-col gap-4 lg:text-end">
 			<li>Titel: Københavnerbilleder - en guide til hipster foto</li>
 			<li>Forfatter: Sten Simons</li>
 			<li>Antal sider: 344</li>
@@ -34,17 +35,19 @@ import Link from '../components/Link.astro';
 	</article>
 	<article  >
 		<h2 class="text-4xl mb-10">Quick facts om bogen</h2>
-		<p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!	 </p>
+		<p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. <br><br> Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. <br><br> Alt sammen krydret med masser af inspirerende fotos. <br><br> God læselyst!	 </p>
 	</article>
 </section>
 
 <hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
-	<section class="mt-32 grid lg:grid-cols-3 mx-auto gap-4 items-center">
+<div class="inviewbilleder">
+<section class="mt-24 lg:mt-32 grid lg:grid-cols-3 mx-auto gap-4 items-center">
 		<img src="/public/kobenhavnerbilleder_oppefra.jpg" alt="Oppefra"/>
 		<img src="/public/kobenhavnerbilleder-sten-simons.jpg" alt="Bog"/>
 		<img src="/public/kobenhavnerbilleder_aaben_venstre.jpg" alt="Venstre"/>
 	</section>
+</div>
 
 	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
@@ -84,6 +87,7 @@ import Link from '../components/Link.astro';
 
 	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
+	<div class="fadeinreview">
 	<section class="mt-32">
 		<h2 class="text-4xl  mb-10">Pressen siger</h2>
 		<div class="grid grid-cols-1 lg:grid-cols-3 mx-auto gap-10 lg:gap-28">
@@ -159,6 +163,7 @@ import Link from '../components/Link.astro';
 			</article>
 		</div>
 	</section>
+</div>
 
 	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
@@ -221,7 +226,7 @@ import Link from '../components/Link.astro';
 	<hr class="mt-32 w-3/5 mx-auto border-1 border-red-600">
 
 	<section  id="bestil" class="max-w-xl mx-auto mt-32 p-2">
-		<h2 class="text-4xl pb-10">Køb Københavnerbilleder nu!</h2>
+		<h2 class="text-4xl pb-10">Køb "Københavnerbilleder" nu!</h2>
 		<form class="space-y-4 grid grid-cols-1 gap-6">
 
 			<div class="flex flex-row gap-5">
@@ -278,9 +283,34 @@ import Link from '../components/Link.astro';
 			</div>
 
 			<div class="flex justify-end pb-5">
-				<Button variant="primary" size="medium">Fortsæt</Button>
+				<Button size="small">Fortsæt</Button>
 			</div>
 		</form>
 	</section>
 </div>
 </MainLayout>
+
+
+<script>
+
+	import { inView } from "motion";
+	
+	const elementmedanimation1 = document.querySelector(".inviewbilleder");
+	
+	inView(elementmedanimation1, () => {
+	
+	elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+	
+	}); 
+	
+	 
+
+	const elementmedanimation2 = document.querySelector(".fadeinreview");
+	
+	inView(elementmedanimation2, () => {
+	
+	elementmedanimation2.classList.add("animate__animated", "animate__fadeInRight");
+	
+	}); 
+	
+	</script>
